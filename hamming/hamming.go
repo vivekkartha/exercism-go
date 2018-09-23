@@ -4,7 +4,7 @@ import u "unicode/utf8"
 import "errors"
 
 //Distance returns the hamming distance between the 2 string params.
-func Distance(a, b string) (i int, er error) {
+func Distance(a, b string) (int, error) {
 	var dist = 0
 	if u.RuneCountInString(a) != u.RuneCountInString(b) {
 		error := errors.New("Unequal strings")
